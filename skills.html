@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Kavya Sri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .navbar li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar li a.active,
+    .navbar li a:hover {
+      color: #00bcd4;
+    }
+
+    .main-header {
+      text-align: center;
+      padding: 30px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.1s;
+    }
+
+    .main-header h1 {
+      font-size: 28px;
+      color: #00bcd4;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .main-header h1 i {
+      font-size: 28px;
+    }
+
+    .main-header p {
+      color: #ccc;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 30px;
+      flex-grow: 1;
+    }
+
+    .skill-box {
+      background-color: #1e1e1e;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.15);
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    /* Add staggered delay for each box */
+    .skill-box:nth-child(1) { animation-delay: 0.3s; }
+    .skill-box:nth-child(2) { animation-delay: 0.5s; }
+    .skill-box:nth-child(3) { animation-delay: 0.7s; }
+    .skill-box:nth-child(4) { animation-delay: 0.9s; }
+
+    .skill-box h2 {
+      color: #00bcd4;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .skill-box ul {
+      list-style: disc;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tech-icons span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #121212;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .tech-icons img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="main-header">
+    <h1><i class="fas fa-brain"></i> Technical Skills</h1>
+    <p>Technologies, tools, and strengths I bring to the table</p>
+  </header>
+
+  <section class="skills-grid">
+    <div class="skill-box">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Team Collaboration</li>
+        <li>Communication</li>
+        <li>Adaptability</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <h2>Certifications</h2>
+      <ul>
+        <li>NPTEL – Joy of Computing Using Python</li>
+        <li>NPTEL – Developing Soft Skills</li>
+        <li>NPTEL – Fundamentals of OS</li>
+        <li>CodeTantra – Python Programming</li>
+        <li>CodeTantra – C Programming</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <h2>Core Areas</h2>
+      <ul>
+        <li>Data Visualization</li>
+        <li>Web Development</li>
+        <li>Machine Learning Basics</li>
+        <li>Problem Solving</li>
+        <li>OOP Concepts</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <h2>Technical Stack</h2>
+      <div class="tech-icons">
+        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"> Python</span>
+        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"> C</span>
+        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML & CSS</span>
+        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> MySQL</span>
+        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"> VS Code</span>
+        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Git & GitHub</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
